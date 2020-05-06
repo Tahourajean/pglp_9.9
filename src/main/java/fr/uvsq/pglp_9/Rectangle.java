@@ -5,7 +5,7 @@
  */
 package fr.uvsq.pglp_9;
 
- class Rectangle extends Carre{
+ public class Rectangle extends Carre{
     int longueur;
     Rectangle(Coordonnee c,int largeur, int lo,String nom){
        super(c,largeur,nom);

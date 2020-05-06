@@ -5,7 +5,7 @@
  */
 package fr.uvsq.pglp_9;
 
- class Carre extends Forme{
+ public class Carre extends Forme{
     int cote;
     Carre(Coordonnee c, int cote,String nom){
        super(c,nom);

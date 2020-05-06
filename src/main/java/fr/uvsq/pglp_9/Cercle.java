@@ -5,7 +5,7 @@
  */
 package fr.uvsq.pglp_9;
 
-class Cercle extends Forme {
+public class Cercle extends Forme {
 
     int rayon;
 
