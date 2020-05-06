@@ -14,8 +14,17 @@ public Triangle(Coordonnee centre, int c,String nom){
 }
 
     @Override
-    double afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    void afficher() {
+        System.out.println("Triangle(cote1="+getCentre().getX()+",cote2="+
+                getCentre().getY()+",cote3="+getM_l3()+")");
+    }
+
+    public double getM_l3() {
+        return m_l3;
+    }
+
+    public void setM_l3(double m_l3) {
+        this.m_l3 = m_l3;
     }
 
     

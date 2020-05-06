@@ -16,7 +16,23 @@ abstract class Forme{
       centre.setY(y);
     }
     
-    abstract double afficher();
-    //abstract double deplacer();
+    abstract void afficher();
+
+    public Coordonnee getCentre() {
+        return centre;
+    }
+
+    public void setCentre(Coordonnee centre) {
+        this.centre = centre;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
  } 
  

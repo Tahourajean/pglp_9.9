@@ -5,18 +5,28 @@
  */
 package fr.uvsq.pglp_9;
 
-class Cercle extends Forme{
+class Cercle extends Forme {
+
     int rayon;
-    Cercle(Coordonnee c, int r,String nom){
-        super(c,nom);
+
+    Cercle(Coordonnee c, int r, String nom) {
+        super(c, nom);
         rayon = r;
     }
 
     @Override
-    double afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    void afficher() {
+        System.out.println("Cercle(centre=(" + super.getCentre().getX()
+                + "," + super.getCentre().getY() + ")" + ",rayon=" + getRayon() + ")");
+
     }
 
-    
-    
- }
+    public int getRayon() {
+        return rayon;
+    }
+
+    public void setRayon(int rayon) {
+        this.rayon = rayon;
+    }
+
+}

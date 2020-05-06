@@ -13,8 +13,17 @@ package fr.uvsq.pglp_9;
     }
 
     @Override
-    double afficher() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    void afficher() {
+        System.out.println("Carree(centre("+getCentre().getX()+","+
+                getCentre().getY()+")"+" ,cote="+getCote()+")");
+    }
+
+    public int getCote() {
+        return cote;
+    }
+
+    public void setCote(int cote) {
+        this.cote = cote;
     }
 
    
