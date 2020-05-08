@@ -20,7 +20,7 @@ public class ConnBD {
   public Connection connect() {
   Connection conn = null;
   String url = "jdbc:derby://localhost:1527/";
-  String dbName = "personnelDB";
+  String dbName = "Forme";
   String driver = "org.apache.derby.jdbc.ClientDriver";
   String userName = "root"; 
   String password = "";

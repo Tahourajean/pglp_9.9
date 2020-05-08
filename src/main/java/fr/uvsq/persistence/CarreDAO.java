@@ -5,27 +5,24 @@
  */
 package fr.uvsq.persistence;
 
-import fr.uvsq.pglp_9.Cercle;
+import fr.uvsq.pglp_9.Carre;
 import java.sql.PreparedStatement;
 
 /**
  *
  * @author USER
  */
-public class CercleDAO extends DAO<Cercle>{
-
-    public CercleDAO() {
-    }
+public class CarreDAO extends DAO <Carre> {
 
     @Override
-    public Cercle create(Cercle obj) {
-         try {
+    public Carre create(Carre obj) {
+        try {
             PreparedStatement prepare=connect.
-            prepareStatement("INSERT INTO Cercle(x,y,rayon,nom) values(?,? ,?,?)");
-            prepare.setInt(1, obj.getCentre().getX());
-            prepare.setInt(2, obj.getCentre().getY());
-            prepare.setInt(3, obj.getRayon());
-            prepare.setString(4, obj.getNom());
+            prepareStatement("INSERT INTO Carre(nom,absisse,ordonne,cote) values(?,? ,?,?)");
+            prepare.setString(1, obj.getNom());
+            prepare.setInt(2, obj.getCentre().getX());
+            prepare.setInt(3, obj.getCentre().getY());
+            prepare.setInt(4, obj.getCote());
             int result=prepare.executeUpdate();
             assert result==1;
         } catch (Exception e) {
@@ -34,16 +31,16 @@ public class CercleDAO extends DAO<Cercle>{
     }
 
     @Override
-    public Cercle update(Cercle obj) {
+    public Carre update(Carre obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Cercle delete(Cercle obj) {
-        int res=0;
+    public Carre delete(Carre obj) {
+         int res=0;
         try {
             PreparedStatement prepare=connect.
-            prepareStatement("DELETE FROM Cercle where nom=?");
+            prepareStatement("DELETE FROM Carre where nom=?");
             prepare.setString(1, obj.getNom());
             res=prepare.executeUpdate();
             
@@ -53,9 +50,8 @@ public class CercleDAO extends DAO<Cercle>{
     }
 
     @Override
-    public Cercle find(String obj) {
+    public Carre find(String obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    }
-
     
+}

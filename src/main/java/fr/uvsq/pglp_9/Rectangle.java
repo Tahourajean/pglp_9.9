@@ -7,14 +7,18 @@ package fr.uvsq.pglp_9;
 
  public class Rectangle extends Carre{
     int longueur;
-    Rectangle(Coordonnee c,int largeur, int lo,String nom){
+    Rectangle(Coordonnee c,int largeur, int longueur,String nom){
        super(c,largeur,nom);
-       this.longueur =  lo;
+       this.longueur =  longueur;
     }
-    public void afficher()
+    /*
+       cette fonction permet d'afficher un rectangle
+    */
+    
+    public void afficher(Rectangle R)
     {
-        System.out.println("Rectangle(centre("+getCentre().getX()
-        +","+getCentre().getY()+")"+",Longueur="+getLongueur()+",Largeur="+getCote()+")");
+        System.out.println("Rectangle(centre("+R.getCentre().getX()
+        +","+R.getCentre().getY()+")"+",Longueur="+R.getLongueur()+",Largeur="+R.getCote()+")");
     }
 
     public int getLongueur() {
