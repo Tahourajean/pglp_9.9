@@ -5,11 +5,13 @@
  */
 package fr.uvsq.commandes;
 
+import fr.uvsq.pglp_9.Forme;
+
 /**
  *
  * @author USER
  */
 public interface Commande {
-    public void execute();
+    public Forme execute();
     
 }

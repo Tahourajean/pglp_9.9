@@ -15,7 +15,7 @@ public class Cercle extends Forme {
     }
 
     @Override
-    void afficher() {
+    public void afficher() {
         System.out.println("Cercle(centre=(" + super.getCentre().getX()
                 + "," + super.getCentre().getY() + ")" + ",rayon=" + getRayon() + ")");
 
