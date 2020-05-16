@@ -13,7 +13,7 @@ package fr.uvsq.pglp_9;
     }
 
     @Override
-    void afficher() {
+    public void afficher() {
         System.out.println("Carree(centre("+getCentre().getX()+","+
                 getCentre().getY()+")"+" ,cote="+getCote()+")");
     }

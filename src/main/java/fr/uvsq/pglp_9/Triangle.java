@@ -50,7 +50,7 @@ public Triangle(Coordonnee centre, String nom,Coordonnee somet_1,Coordonnee some
     }
 
     @Override
-    void afficher() {
+    public void afficher() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

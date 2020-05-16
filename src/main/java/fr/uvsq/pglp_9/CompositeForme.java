@@ -29,10 +29,19 @@ public class CompositeForme extends Forme  {
     }
 
     @Override
-    void afficher() {
+    public void afficher() {
         for (Forme forme : groupeForme) {
             forme.afficher();
         }
     }
+
+    public List<Forme> getGroupeForme() {
+        return groupeForme;
+    }
+
+    public void setGroupeForme(List<Forme> groupeForme) {
+        this.groupeForme = groupeForme;
+    }
+    
     
 }

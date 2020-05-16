@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.uvsq.persistence;
+package InterfaceUser;
 
 /**
  *
  * @author USER
  */
-class CercloeDAO {
+public class DrawingApp {
     
 }

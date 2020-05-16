@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package fr.uvsq.pglp_9;
-abstract class Forme{
+public abstract class Forme{
     protected Coordonnee centre;
     String nom;
     Forme(Coordonnee c,String nom){
@@ -16,7 +16,7 @@ abstract class Forme{
       centre.setY(y);
     }
     
-    abstract void afficher();
+   public abstract void afficher();
 
     public Coordonnee getCentre() {
         return centre;
