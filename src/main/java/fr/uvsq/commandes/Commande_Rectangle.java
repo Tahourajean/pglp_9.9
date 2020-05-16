@@ -6,6 +6,7 @@
 package fr.uvsq.commandes;
 
 import fr.uvsq.persistence.RectangleDAO;
+import fr.uvsq.pglp_9.Forme;
 import fr.uvsq.pglp_9.Rectangle;
 
 /**
@@ -17,8 +18,9 @@ public class Commande_Rectangle implements Commande{
     private Rectangle rectangle;
 
     @Override
-    public void execute() {
+    public Forme execute() {
         this.recangleDAO.create(rectangle);
+        return  rectangle;
     }
     
 }

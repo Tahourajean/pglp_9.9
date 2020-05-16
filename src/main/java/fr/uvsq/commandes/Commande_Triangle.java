@@ -7,6 +7,7 @@ package fr.uvsq.commandes;
 
 import fr.uvsq.persistence.RectangleDAO;
 import fr.uvsq.persistence.TriangleDAO;
+import fr.uvsq.pglp_9.Forme;
 import fr.uvsq.pglp_9.Rectangle;
 import fr.uvsq.pglp_9.Triangle;
 
@@ -18,9 +19,9 @@ public class Commande_Triangle implements Commande{
 private TriangleDAO triangleDAO;
 private Triangle triangle;
     @Override
-    public void execute() {
+    public Forme execute() {
         this.triangleDAO.create(triangle);
-        
+       return triangle;
     }
     
 }

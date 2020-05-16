@@ -7,6 +7,7 @@ package fr.uvsq.commandes;
 
 import fr.uvsq.persistence.CarreDAO;
 import fr.uvsq.pglp_9.Carre;
+import fr.uvsq.pglp_9.Forme;
 
 /**
  *
@@ -17,8 +18,9 @@ public class Commande_Carree implements Commande{
     private CarreDAO carreDAO;
 
     @Override
-    public void execute() {
+    public Forme execute() {
         carreDAO.create(carre);
+        return carre;
     }
     
 }

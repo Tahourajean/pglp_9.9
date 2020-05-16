@@ -7,6 +7,7 @@ package fr.uvsq.commandes;
 
 import fr.uvsq.persistence.CercleDAO;
 import fr.uvsq.pglp_9.Cercle;
+import fr.uvsq.pglp_9.Forme;
 
 /**
  *
@@ -17,9 +18,9 @@ public class Commande_Cercle implements Commande{
     private Cercle cercle;
 
     @Override
-    public void execute() {
+    public Forme execute() {
         cercleDAO.create(cercle);
-       
+       return cercle;
     }
     
 }
